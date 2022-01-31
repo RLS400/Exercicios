@@ -1,16 +1,3 @@
-
-class Bola:
-    def __init__(self):
-        self.cor ="preto"
-        self.cicunferencia = 1
-        self.material = "plastico"
-
-    def qual_cor(self):
-        return self.cor
-
-    def trocar_cor(self, nova_cor):
-        self.cor = nova_cor
-
 class Pessoa:
     def __init__(self, idade=0, altura=0.3, peso=3):
         self.nome = ""
@@ -36,13 +23,6 @@ class Pessoa:
         self.altura += altura
 
 if __name__ == '__main__':
-    bola = Bola()
-    print(f"Sua bola e {bola.qual_cor()}")
-    bola.trocar_cor("branca")
-    print(f"Sua bola e {bola.qual_cor()}")
-    print(f"{bola.material}")
-    print(f"{bola.cicunferencia}")
-
     pessoa1 = Pessoa()
     pessoa1.nome="Joao"
     pessoa1.altura=160
