@@ -1,12 +1,12 @@
 class Pessoa:
-    def __init__(self, idade=0, altura=0.3, peso=3):
-        self.nome = ""
+    def __init__(self, nome="", idade=0, altura=0.3, peso=3):
+        self.nome = nome
         self.idade = idade
         self.altura = altura
         self.peso = peso
 
     def quem_eh(self):
-        return f"Esse é {self.nome}, {self.idade} anos, altura {self.altura:.2f} metros e {self.peso} kg."
+        return f"Esse e {self.nome}, {self.idade} anos, altura {self.altura:.2f} metros e {self.peso} kg."
 
     def envelhecer(self,anos):
         self.idade += anos
@@ -23,19 +23,15 @@ class Pessoa:
         self.altura += altura
 
 if __name__ == '__main__':
-    pessoa1 = Pessoa()
-    pessoa1.nome="Joao"
-    pessoa1.altura=160
-    pessoa1.peso=75
-    pessoa1.idade=19
+    pessoa1 = Pessoa("Joao",19,1.60,75)
 
     pessoa2 = Pessoa()
     pessoa2.nome = "Leandro"
     print(pessoa1.quem_eh())
     print(pessoa2.quem_eh())
 
-    pessoa1.envelhecer(21)
-    pessoa2.envelhecer(21)
+    pessoa1.envelhecer(3)
+    pessoa2.envelhecer(3)
     pessoa1.emagrecer(9)
     pessoa2.engordar(61)
     print(pessoa1.quem_eh())
