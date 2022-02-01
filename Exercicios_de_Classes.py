@@ -5,8 +5,8 @@ class Pessoa:
         self.altura = altura
         self.peso = peso
 
-    def quem_eh(self):
-        return f"Esse e {self.nome}, {self.idade} anos, altura {self.altura:.2f} metros e {self.peso} kg."
+    def quem_é(self):
+        return f"Esse é {self.nome}, {self.idade} anos, altura {self.altura:.2f} metros e {self.peso} kg."
 
     def envelhecer(self,anos):
         self.idade += anos
@@ -27,20 +27,20 @@ if __name__ == '__main__':
 
     pessoa2 = Pessoa()
     pessoa2.nome = "Leandro"
-    print(pessoa1.quem_eh())
-    print(pessoa2.quem_eh())
+    print(pessoa1.quem_é())
+    print(pessoa2.quem_é())
 
     pessoa1.envelhecer(3)
     pessoa2.envelhecer(3)
     pessoa1.emagrecer(9)
     pessoa2.engordar(61)
-    print(pessoa1.quem_eh())
-    print(pessoa2.quem_eh())
+    print(pessoa1.quem_é())
+    print(pessoa2.quem_é())
 
     while pessoa1.idade >= 2* pessoa2.idade:
         pessoa1.envelhecer(1)
         pessoa2.envelhecer(1)
 
-    print(pessoa1.quem_eh())
-    print(pessoa2.quem_eh())
+    print(pessoa1.quem_é())
+    print(pessoa2.quem_é())
 
